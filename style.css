@@ -34,19 +34,17 @@ img {
 .logo {
     height: 70px;
     width: 70px;
-    background-image: url(body-builder.png);
+    background-image: url('body-builder.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-left: 220px;
 }
 
 .menu {
     display: flex;
-    justify-content: right;
-    margin-right: 20px;
+    justify-content: flex-end;
     flex: 1;
-    font-size: 20px;
+    font-size: 1.25rem; /* Usar rem para escalabilidade */
 }
 
 .menu ul {
@@ -59,7 +57,7 @@ img {
     color: white;
     text-decoration: none;
     padding: 5px 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, padding 0.3s;
 }
 
 .menu ul li a:hover {
@@ -71,7 +69,6 @@ img {
 .botao {
     display: flex;
     align-items: center;
-    margin-right: 320px;
 }
 
 .button {
@@ -81,8 +78,8 @@ img {
     border-radius: 25px;
     text-align: center;
     text-decoration: none;
-    font-size: 15px;
-    transition: background-color 0.3s;
+    font-size: 0.9375rem; /* Usar rem para escalabilidade */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .button:hover {
@@ -96,17 +93,20 @@ img {
     font-size: 24px;
     color: white;
     cursor: pointer;
-    margin-right: 20px;
+    margin-left: 20px; /* Ajuste para alinhamento */
 }
 
-@media (max-width: 1024px) { /* Ajustado para tablets e telas de tamanho médio */
+@media (max-width: 768px) {
     .nav-bar {
         padding: 10px;
         height: 90px;
+        flex-direction: column; /* Alinha logo e menu verticalmente */
+        align-items: flex-start; /* Alinha logo e menu no início */
     }
 
     .logo {
-        margin-left: 20px;
+        margin-left: 0; /* Remove margem à esquerda */
+        margin-bottom: 10px; /* Espaçamento inferior para separação */
     }
 
     .menu-hamburger {
@@ -120,16 +120,16 @@ img {
         background-color: black;
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
         height: 100%;
         width: 250px;
-        padding-top: 110px;
-        transition: right 0.3s ease;
-        z-index: 1001;
+        padding-top: 90px; /* Ajuste o padding para alinhamento */
+        transition: transform 0.3s ease;
+        transform: translateX(100%); /* Inicialmente fora da tela */
     }
 
     .menu.active {
-        right: 0;
+        transform: translateX(0); /* Mostra o menu quando ativo */
     }
 
     .menu ul {
@@ -145,28 +145,8 @@ img {
     }
 
     .botao {
-        margin-right: 20px;
-        margin-left: 120px;
-    }
-}
-
-@media (max-width: 414px) { /* Ajustado para iPhone 11 e telas menores */
-    .nav-bar {
-        padding: 10px;
-        height: 80px; /* Reduzido para telas menores */
-    }
-
-    .logo {
-        margin-left: 10px;
-    }
-
-    .menu {
-        padding-top: 80px; /* Ajustado para o novo tamanho da barra de navegação */
-    }
-
-    .botao {
-        margin-right: 10px; /* Ajustado para telas menores */
-        margin-left: 10px;
+        margin-right: 0;
+        margin-left: 0; /* Ajuste margem para a responsividade */
     }
 }
 
@@ -178,7 +158,7 @@ img {
     padding-top: 110px;
     background-image: url('vista-de-angulo-baixo-do-homem-de-construcao-muscular-irreconhecivel-se-preparando-para-levantar-uma-barra-em-um-clube-de-saude.jpg');
     background-size: cover;
-    background-position: center -200px;
+    background-position: center;
     background-repeat: no-repeat;
     border-bottom: solid 1px white;
 }
@@ -198,19 +178,19 @@ img {
 .destaque {
     font-weight: bold;
     color: #cf1b03;
-    font-size: 2ch;
+    font-size: 2rem; /* Usar rem para escalabilidade */
     padding: 2px 4px;
 }
 
 h1 {
-    font-size: 6ch;
+    font-size: 6rem; /* Usar rem para escalabilidade */
     line-height: 1.2;
 }
 
 h4 {
     padding-top: 30px;
     padding-bottom: 30px;
-    font-size: 2.5ch;
+    font-size: 2.5rem; /* Usar rem para escalabilidade */
     color: rgb(223, 211, 211);
     line-height: 1.2;
 }
@@ -237,20 +217,16 @@ h4 {
 
 #botao2 {
     display: inline-block;
-    font-size: 3ch;
+    font-size: 3rem; /* Usar rem para escalabilidade */
     margin-top: 20px;
     border-radius: 50px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 15px 30px;
 }
 
 @media (max-width: 768px) {
     .sessao1 {
         padding-top: 90px;
         height: auto;
-        width: 100%;
         background-position: center;
     }
 
@@ -261,15 +237,15 @@ h4 {
     }
 
     h1 {
-        font-size: 5ch;
+        font-size: 5rem; /* Usar rem para escalabilidade */
     }
 
     h4 {
-        font-size: 2ch;
+        font-size: 2rem; /* Usar rem para escalabilidade */
     }
 
     #botao2 {
-        font-size: 2.5ch;
+        font-size: 2.5rem; /* Usar rem para escalabilidade */
         padding: 10px 20px;
         margin-bottom: 30px;
     }
@@ -292,7 +268,8 @@ h4 {
 .vantagens {
     color: white;
     margin-top: 40px;
-    margin-left: 15%;
+    margin-left: auto; /* Centraliza a margem esquerda */
+    margin-right: auto; /* Centraliza a margem direita */
     display: flex;
     flex-wrap: wrap;
     width: 70%;
@@ -307,7 +284,7 @@ h4 {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 20px;
+    font-size: 1.25rem; /* Usar rem para escalabilidade */
     border-radius: 20px;
     padding: 20px;
 }
@@ -321,12 +298,12 @@ h4 {
 
 .texto-tabela {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1.875rem; /* Usar rem para escalabilidade */
     line-height: 2.5;
 }
 
 .box p {
-    font-size: 16px;
+    font-size: 1rem; /* Usar rem para escalabilidade */
 }
 
 @media (max-width: 768px) {
@@ -335,16 +312,17 @@ h4 {
     }
 
     .textodiv2 h1 {
-        font-size: 5ch;
+        font-size: 3rem; /* Usar rem para escalabilidade */
     }
 
     .textodiv2 h4 {
-        font-size: 2.5ch;
+        font-size: 1.875rem; /* Usar rem para escalabilidade */
     }
 
     .vantagens {
         width: 90%;
-        margin-left: 5%;
+        margin-left: auto; /* Centraliza a margem esquerda */
+        margin-right: auto; /* Centraliza a margem direita */
     }
 
     .box {
@@ -359,10 +337,10 @@ h4 {
     }
 
     .texto-tabela {
-        font-size: 25px;
+        font-size: 1.5625rem; /* Usar rem para escalabilidade */
     }
 
     .box p {
-        font-size: 14px;
+        font-size: 0.875rem; /* Usar rem para escalabilidade */
     }
 }
