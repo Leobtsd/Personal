@@ -99,7 +99,7 @@ img {
     margin-right: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) { /* Ajustado para tablets e telas de tamanho médio */
     .nav-bar {
         padding: 10px;
         height: 90px;
@@ -147,6 +147,26 @@ img {
     .botao {
         margin-right: 20px;
         margin-left: 120px;
+    }
+}
+
+@media (max-width: 414px) { /* Ajustado para iPhone 11 e telas menores */
+    .nav-bar {
+        padding: 10px;
+        height: 80px; /* Reduzido para telas menores */
+    }
+
+    .logo {
+        margin-left: 10px;
+    }
+
+    .menu {
+        padding-top: 80px; /* Ajustado para o novo tamanho da barra de navegação */
+    }
+
+    .botao {
+        margin-right: 10px; /* Ajustado para telas menores */
+        margin-left: 10px;
     }
 }
 
